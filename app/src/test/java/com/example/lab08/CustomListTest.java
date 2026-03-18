@@ -20,4 +20,15 @@ public class CustomListTest {
         assertEquals(2, list.countCities()); // should fail first
     }
 
+    @Test
+    public void testDelete() {
+        CustomList list = new CustomList();
+        City city = new City("Calgary", "AB");
+
+        list.addCity(city);
+        list.delete(city);
+
+        assertEquals(0, list.countCities()); // should FAIL
+    }
+
 }
